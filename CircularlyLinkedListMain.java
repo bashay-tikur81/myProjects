@@ -16,19 +16,20 @@ class CircularlyLinkedList<E>{
 	    next = n;
 	}
     }
-    // instance variable of SingleLinkedList
+    // instance variable of CircularlyLinkedList
     private Node<E> tail = null;
-    int size;
+    int size = 0;
     // constructor
-    public SinglyLinkedList(){}
+    public CircularlyLinkedList(){}
     
     public int size(){ return size; }
     public boolean isEmpty(){return size == 0;}
+    
     public E first(){
 	if(isEmpty()){
 	    return null;
 	}
-	return head.getElement();
+	return tail.getNext().getElement();
     }
     public E last(){
 	if(isEmpty()){
@@ -36,55 +37,73 @@ class CircularlyLinkedList<E>{
 	}
 	return tail.getElement();
     }
+    
     public void addFirst(E elem){
-	head = new Node<>(elem,head);
+	// create a node
 	if(size == 0){
-	    tail = head;
+	    tail = new Node<>(elem, null);
+	    tail.setNext(tail);
+	} else {
+	    Node<E> newNode = new Node<>(elem,tail.getNext());
+	    tail.setNext(newNode);
 	}
 	size++;
     }
     public void addLast(E elem){
-	Node<E> newNode = new Node<>(elem, null);
-	if(isEmpty()){
-	    head = newNode;
-	} else{
-	    tail.setNext(newNode);
-	}
-	tail = newNode;
-	size++;
+	addFirst(elem);
+	tail = tail.getNext();
     }
+    
     public E removeFirst(){
 	if(isEmpty()){
 	    return null;
 	}
-	E value = head.getElement();
-	head = head.getNext();
-	size--;
-	if(size == 0){
+	Node<E> head = tail.getNext();
+	if(tail == head){
 	    tail = null;
+	} else{
+	    tail.setNext(head.getNext());
 	}
-	return value;
+	size--;
+	return head.getElement();
     }
-        @Override
+    
+    @Override
     public String toString(){
 	StringBuilder sb = new StringBuilder();
 	sb.append("[");
-	Node<E> trav = head;
-	while(trav != null){
+	if(tail == null){
+	    return "[]";
+	    
+	}
+	Node<E> terminator = tail;
+	Node<E> trav = tail.getNext();
+	while(trav != terminator){
 	    sb.append(trav.getElement());
-	    trav = trav.getNext();
-	    if(trav != null){
+	    if(trav != terminator){
 		sb.append(",");
 	    }
+	    trav = trav.getNext();
+		    
 	}
-	sb.append("]");
+       
+	sb.append(tail.getElement()+"]");
 	return sb.toString();
     }
 }
 
-
 public class CircularlyLinkedListMain{
     public static void main(String[] args){
+	CircularlyLinkedList<Integer> nums = new CircularlyLinkedList<>();
+	// CircularyLinkedList<Integer> nums = new CircularlyLinkedLIst<>();
+	nums.addFirst(22);
+	// nums.addFirst(11);
+	// nums.addFirst(99);
+	// nums.addLast(33);
+	// nums.addLast(44);
+	// nums.addLast(55);
+	System.out.println(nums.removeFirst());
+	System.out.println(nums.toString());
 	
     }
 }
