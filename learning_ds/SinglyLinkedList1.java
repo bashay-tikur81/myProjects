@@ -68,17 +68,18 @@ class SinglyLinkedList<E>{
 	}
 	return value;
     }
-        @Override
+    @Override
     public String toString(){
 	StringBuilder sb = new StringBuilder();
 	sb.append("[");
 	Node<E> trav = head;
 	while(trav != null){
 	    sb.append(trav.getElement());
-	    trav = trav.getNext();
 	    if(trav != null){
 		sb.append(",");
 	    }
+	    trav = trav.getNext();
+		    
 	}
 	sb.append("]");
 	return sb.toString();

@@ -37,6 +37,12 @@ class CircularlyLinkedList<E>{
 	}
 	return tail.getElement();
     }
+    public void rotate(){
+	if(tail != null){
+	    tail = tail.getNext();
+	}
+	
+    }
     
     public void addFirst(E elem){
 	// create a node
@@ -95,13 +101,12 @@ class CircularlyLinkedList<E>{
 public class CircularlyLinkedListMain{
     public static void main(String[] args){
 	CircularlyLinkedList<Integer> nums = new CircularlyLinkedList<>();
-	// CircularyLinkedList<Integer> nums = new CircularlyLinkedLIst<>();
 	nums.addFirst(22);
-	// nums.addFirst(11);
-	// nums.addFirst(99);
-	// nums.addLast(33);
-	// nums.addLast(44);
-	// nums.addLast(55);
+	nums.addFirst(11);
+	nums.addFirst(99);
+	nums.addLast(33);
+	nums.addLast(44);
+	nums.addLast(55);
 	System.out.println(nums.removeFirst());
 	System.out.println(nums.toString());
 	
