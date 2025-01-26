@@ -1,4 +1,7 @@
 *~
 *#*
 *.class
-
+.metadata/
+.gitignore
+*swp
+*jdt.*
