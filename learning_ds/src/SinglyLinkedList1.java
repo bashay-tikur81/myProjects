@@ -1,3 +1,4 @@
+package learning_ds;
 class SinglyLinkedList<E>{
     private class Node<E>{
 	private E element;

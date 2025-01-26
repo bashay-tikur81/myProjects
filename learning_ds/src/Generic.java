@@ -1,3 +1,4 @@
+package learning_ds;
 class GenericObject{
     Object obj;
     public GenericObject(Object obj){

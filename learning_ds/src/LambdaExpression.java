@@ -1,3 +1,4 @@
+package learning_ds;
 
 @FunctionalInterface
 interface Animal{
