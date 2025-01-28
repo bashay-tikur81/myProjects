@@ -1,5 +1,4 @@
 package learning_ds.src;
-learning_ds.src;
 class Human{
     private int age;
     private String name;

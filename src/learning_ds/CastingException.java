@@ -1,5 +1,4 @@
 package learning_ds.src;
-learning_ds.src;
 
 public class CastingException{
     public static void main(String[] args){

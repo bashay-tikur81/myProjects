@@ -1,5 +1,4 @@
 package learning_ds.src;
-learning_ds.src;
 
 class Stack<T>{
     private int capacity;
@@ -53,7 +52,6 @@ class Stack<T>{
 	return sb.toString();
     }
 }
-
 public class ArrayStack{
     public static void main(String[] args){
 	Stack<Integer> stk = new Stack<>(10);

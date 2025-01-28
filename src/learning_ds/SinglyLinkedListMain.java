@@ -1,5 +1,5 @@
 package learning_ds.src;
-learning_ds.src;
+
 class SinglyLinkedList<T>{
     private class Node<T>{
     T data;

@@ -1,5 +1,4 @@
 package learning_ds.src;
-learning_ds.src;
 class SinglyLinkedList<E>{
     private class Node<E>{
 	private E element;

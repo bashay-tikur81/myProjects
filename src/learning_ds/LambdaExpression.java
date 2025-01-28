@@ -1,5 +1,4 @@
 package learning_ds.src;
-learning_ds.src;
 
 @FunctionalInterface
 interface Animal{

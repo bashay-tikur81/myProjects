@@ -1,5 +1,4 @@
 package learning_ds.src;
-learning_ds.src;
 class GenericObject{
     Object obj;
     public GenericObject(Object obj){

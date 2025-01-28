@@ -1,5 +1,4 @@
 package learning_ds.src;
-learning_ds.src;
 
 class ArrayStack implements Stack<Integer>{
     int size;
