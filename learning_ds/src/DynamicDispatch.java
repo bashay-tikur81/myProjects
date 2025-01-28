@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 class Human{
     private int age;
     private String name;

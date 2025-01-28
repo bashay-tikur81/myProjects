@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 package learning_ds;
 
 abstract class Animal{

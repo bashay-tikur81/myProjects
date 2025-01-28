@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 class CircularlyLinkedList<E>{
     private class Node<E>{
 	private E element;

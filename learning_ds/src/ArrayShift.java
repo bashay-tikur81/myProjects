@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 import java.util.*;
 
 public class ArrayShift{

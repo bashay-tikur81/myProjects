@@ -1,4 +1,5 @@
-package learning_ds;
+learning_ds.src;
+
 class SinglyLinkedList<T>{
     private class Node<T>{
     T data;

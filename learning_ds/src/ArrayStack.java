@@ -1,16 +1,14 @@
-package learning_ds;
-
+learning_ds.src;
 
 class Stack<T>{
-    int capacity;
-    T[] stack;
-    int length = -1;
+    private int capacity;
+    private T[] stack;
+    private int length = -1;
+    public Stack(){ this(1000); }
     public Stack(int capacity){
 	this.capacity = capacity;
 	stack = (T[])(new Object[capacity]);
     }
-
-    
     public void push(T data){
 	if(isFull()){
 	    System.out.println("Stack is full, buffer overflow");
@@ -24,23 +22,22 @@ class Stack<T>{
 	    System.out.println("Stack is empty, buffer underflow");
 	    System.exit(1);
 	}
-	value = stack[length--];
+	value = stack[length];
+	
+	/* dereference stack[length], stack would work with out it.
+	   returning a cell to null reference is to assist Java's garbage collection
+	   mechanism */
+	stack[length] = null;
+	length--;
 	return value;
-	
-	
     }
-    public boolean isFull(){
-	return length == capacity;
-    }
-    public boolean isEmpty(){
-	return length < 0;
-    }
-    public T peak(){
+    public boolean isFull(){ return length == capacity; }
+    public boolean isEmpty(){ return length < 0; }
+    public T peek(){
+	if(isEmpty()){return null;}
 	return stack[length];
     }
-    public int size(){
-	return length+1;
-    }
+    public int size(){ return length+1; }
     @Override
     public String toString(){
 	StringBuilder sb = new StringBuilder();
@@ -49,15 +46,11 @@ class Stack<T>{
 	while(temp < size()){
 	    sb.append(stack[temp]);
 	    ++temp;
-	    if(temp < size()){
-		sb.append(" ");
-	    }
+	    if(temp < size()){ sb.append(" "); }
 	}
 	sb.append("]");
 	return sb.toString();
     }
-    
-    
 }
 
 public class ArrayStack{

@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 @FunctionalInterface
 interface Person{
     String profession(String name, String profession);

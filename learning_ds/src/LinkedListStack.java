@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 class Node<T>{
     T data;
     Node next;
@@ -41,7 +41,6 @@ class Stack<T>{
 	return sb.toString();
     }
 }
-
 
 
 public class LinkedListStack{

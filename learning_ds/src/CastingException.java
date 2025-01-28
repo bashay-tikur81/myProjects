@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 
 public class CastingException{
     public static void main(String[] args){

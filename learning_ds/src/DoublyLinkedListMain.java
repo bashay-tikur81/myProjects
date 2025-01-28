@@ -1,4 +1,4 @@
-package learning_ds;
+learning_ds.src;
 
 class DoublyLinkedList<E>{
     // let's create private node
