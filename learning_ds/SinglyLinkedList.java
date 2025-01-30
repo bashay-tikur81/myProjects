@@ -1,4 +1,3 @@
-// package learnig_ds;
 class SinglyLinkedList<E>{
 	private Node<E> head = null;
 	private Node<E> tail = null;
@@ -76,4 +75,20 @@ class SinglyLinkedList<E>{
 		if(isEmpty()){return null; }
 		return tail.getElement();
 	}
+	@Override
+    public String toString(){
+	StringBuilder sb = new StringBuilder();
+	sb.append("[");
+	Node<E> trav = head;
+	while(trav != null){
+	    sb.append(trav.getElement());
+	    if(trav != null){
+		sb.append(",");
+	    }
+	    trav = trav.getNext();
+		    
+	}
+	sb.append("]");
+	return sb.toString();
+    }
 }

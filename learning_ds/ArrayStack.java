@@ -1,10 +1,10 @@
 
-class Stack<T>{
+class AStack<T>{
     private int capacity;
     private T[] stack;
     private int length = -1;
-    public Stack(){ this(1000); }
-    public Stack(int capacity){
+    public AStack(){ this(1000); }
+    public AStack(int capacity){
 	this.capacity = capacity;
 	stack = (T[])(new Object[capacity]);
     }
@@ -53,7 +53,7 @@ class Stack<T>{
 }
 public class ArrayStack{
     public static void main(String[] args){
-	Stack<Integer> stk = new Stack<>(10);
+	AStack<Integer> stk = new AStack<>(10);
 	for(int i = 0; i< 10; i++){
 	    stk.push(i);
 	}
