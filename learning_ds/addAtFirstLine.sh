@@ -1,6 +1,6 @@
 #!/bin/bash
 # The text you want to add to the first line
-text_to_add="package learning_ds.src;"
+text_to_add="package src;"
 
 # Loop through all Java files in the current directory
 for file in *.java; do

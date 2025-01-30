@@ -1,4 +1,3 @@
-package learning_ds.src;
 class Human{
     private int age;
     private String name;
@@ -35,7 +34,5 @@ public class DynamicDispatch{
 	Human hm = new Student(20, "Abebe");
 	hm.eat();
 	hm.study("Mathematics");
-
-	
     }
 }

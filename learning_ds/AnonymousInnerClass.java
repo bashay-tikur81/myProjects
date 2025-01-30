@@ -1,5 +1,3 @@
-package learning_ds.src;
-package learning_ds;
 
 abstract class Animal{
     public abstract void eat();

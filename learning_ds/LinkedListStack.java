@@ -1,4 +1,3 @@
-package learning_ds.src;
 class Node<T>{
     T data;
     Node next;

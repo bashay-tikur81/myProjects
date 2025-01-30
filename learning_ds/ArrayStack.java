@@ -1,4 +1,3 @@
-package learning_ds.src;
 
 class Stack<T>{
     private int capacity;
